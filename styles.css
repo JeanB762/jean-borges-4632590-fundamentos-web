@@ -1,0 +1,288 @@
+/* Estilização de componentes gerais*/
+body {
+  font-family: 'Roboto', sans-serif; /* Define a fonte padrão do site como a fonte que foi importada no html*/
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Cabeçalho da página*/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #2a8a57;
+  color: #fff;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-hamburguer {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Principal */
+main {
+  margin-top: 60px; /* Compensar a altura do header fixo */
+}
+
+/* Seções */
+section {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  min-height: calc(
+    100vh - 60px
+  ); /* Calcula para que o componeten ocupe 100% da altura da tela, subtraindo a altura do header */
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Espaço invisível para compensar o header fixo */
+section::before {
+  content: '';
+  display: block;
+  height: 60px; /* Altura do header fixo */
+  margin-top: -60px; /* Compensa a altura do header fixo */
+  visibility: hidden;
+}
+
+/* Tipografia */
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+p {
+  font-size: 1.75rem;
+  text-align: justify;
+}
+
+/* Containers */
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Estilos Específicos das Seções */
+#sobre-mim .container {
+  background-color: #a1ffc380;
+  padding: 60px 100px;
+  border-radius: 15px;
+}
+
+#formacao {
+  background-image: url('./assets/ads.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#formacao .container {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 60px 100px;
+  border-radius: 15px;
+}
+
+#portfolio .container {
+  background-color: #a1ffc380;
+  padding: 60px 100px;
+  border-radius: 15px;
+}
+
+#portfolio a {
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #2a8a57;
+  font-weight: bold;
+}
+
+#contato {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+}
+
+#contato .container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+#contato h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 60px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #2a8a57;
+  outline: none;
+}
+
+button {
+  background-color: #2a8a57e5;
+  color: white;
+  width: 100%;
+  height: 60px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #2a8a57;
+}
+
+textarea {
+  resize: vertical; /* Permite redimensionar a área de texto verticalmente */
+}
+
+/* Cores de fundo para seções */
+#sobre-mim,
+#portfolio {
+  background-color: #ebfff2;
+}
+
+#formacao,
+#contato {
+  background-color: #a1ffc3;
+}
+
+/* Rodapé */
+footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #2a8a57;
+  color: white;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-hamburguer {
+    display: block;
+  }
+
+  header nav {
+    justify-content: flex-start;
+    margin-left: 20px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #2a8a57;
+    display: none;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  header nav ul.show {
+    display: flex;
+    padding: 0 20px;
+    gap: 0;
+  }
+
+  main {
+    margin-top: 80px; /* Ajusta a margem superior para telas menores */
+  }
+
+  section {
+    min-height: calc(
+      100vh - 80px
+    ); /* Ajusta a altura para compensar o header maior no mobile */
+  }
+
+  section::before {
+    height: 80px; /* Ajusta a altura do espaço invisível no mobile */
+    margin-top: -80px; /* Compensa a altura do header fixo no mobile */
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+}

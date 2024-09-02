@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Importação de uma fonte externa oara ser aplicada no site -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Importa o arquivo de estilos -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>Portifólio Jean Borges - 4632590</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="menu-hamburguer" id="menu-toggle">&#9776;</div>
+        <!-- Botão para abrir o menu na versão mobile-->
+        <ul id="menu-list">
+          <!-- links internos -->
+          <li><a href="#sobre-mim">Sobre Mim</a></li>
+          <li><a href="#formacao">Formação</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Cria a seção principal do site -->
+      <section id="sobre-mim">
+        <!-- Cria um container para centralizar e organizar o conteúdo dentro das sessões -->
+        <div class="container">
+          <h2>Sobre Mim</h2>
+          <p>
+            Programador apaixonado por tecnologia e interessado em desafios,
+            buscando soluções que vão além do código.
+          </p>
+          <p>
+            Comecei a programar na faculdade utilizando a temida linguagem C,
+            mas foi depois de conhecer outras linguagens, principalmente o
+            Javascript e o ecossistema web que me apaixonei de vez por
+            programação e de lá pra cá me mantenho empenhado em aprender e me
+            desenvolver cada vez mais, buscando sempre desafios maiores.
+          </p>
+          <p>
+            Trabalho atualmente com desenvolvimento web, focado em aplicações e
+            soluções que facilitam a vida das pessoas e das empresas, buscando
+            utilizar as melhores ferramentas e metodologias.
+          </p>
+        </div>
+      </section>
+
+      <section id="formacao">
+        <div class="container">
+          <h2>Formação</h2>
+          <p>
+            Sou estudante de Análise e Desenvolvimento de Sistemas na Uninter,
+            onde estou aprofundando meus conhecimentos em tecnologia e
+            programação.
+          </p>
+          <p>
+            Durante minha formação, tenho explorado diversas áreas da
+            computação, com foco em desenvolver soluções inovadoras e eficientes
+            que possam impactar positivamente o mundo ao meu redor.
+          </p>
+          <p>
+            Estou sempre em busca de desafios que me permitam aplicar na prática
+            o que aprendo e expandir minhas habilidades como desenvolvedor.
+          </p>
+        </div>
+      </section>
+
+      <section id="portfolio">
+        <div class="container">
+          <h2>Portfólio</h2>
+          <p>
+            Ao longo da minha carreira, adquiri valiosas experiências
+            profissionais em diferentes áreas do desenvolvimento de software.
+            Iniciei minha trajetória trabalhando com desenvolvimento de
+            aplicativos, onde pude aplicar meus conhecimentos em diversas
+            tecnologias e participar de projetos desafiadores.
+          </p>
+          <p>
+            Tive a oportunidade de atuar como programador na loja Havan, onde
+            contribui para o desenvolvimento de soluções que otimizaram
+            processos internos e melhoraram a experiência dos usuários.
+          </p>
+          <p>
+            Atualmente, trabalho como desenvolvedor fullstack na
+            <a href="https://www.useuniformesp.com.br/" target="_blank">
+              <!-- Link externo -->
+              Use Uniforme</a
+            >
+            onde sou responsável por criar e manter o E-Commerce e os sistemas
+            de uso interno que atendem às necessidades da empresa e de seus
+            clientes. Minha função exige a combinação de habilidades tanto no
+            front-end quanto no back-end, garantindo a entrega de soluções
+            completas e eficientes.
+          </p>
+        </div>
+      </section>
+
+      <section id="contato">
+        <div class="container">
+          <form class="contact-form">
+            <!-- Formulário de contato -->
+            <h2>Entre em contato</h2>
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Seu nome"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Seu email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="5"
+                placeholder="Sua mensagem"
+                required
+              ></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 - Jean Borges - 4632590</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <!-- Importação do arquivo de scripts para funcionamento do menu mobile -->
+  </body>
+</html>
